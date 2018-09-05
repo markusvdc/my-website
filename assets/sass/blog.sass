@@ -1,0 +1,160 @@
+@import 'geral'
+@import 'feed'
+@import 'pesquisar'
+
+.filtro
+    background-color: #FFF
+    @media #{$celular}
+        padding: 30px 0
+    @media #{$celularh}
+        padding: 50px 0
+    @media #{$tablet}
+        padding: 50px 0
+    @media #{$notebook}
+        padding: 55px 0
+    @media #{$desktop}
+        padding: 70px 0
+    ul
+        float: left
+        @media #{$celular}
+            float: none
+        @media #{$celularh}
+        @media #{$tablet}
+            margin-left: 155px
+            // margin-left: 85px
+        @media #{$notebook}
+            margin-left: 265px
+            // margin-left: 185px
+        @media #{$desktop}
+            margin-left: 335px
+            // margin-left: 235px
+        li
+            float: left
+            text-align: center
+            position: relative
+            cursor: pointer
+            @media #{$celular}
+                float: none
+                overflow: hidden
+            @media #{$celularh}
+                padding: 0 25px
+            @media #{$tablet}
+                padding: 0 35px
+            @media #{$notebook}
+                padding: 0 40px
+            @media #{$desktop}
+                padding: 0 50px
+            &:first-child
+                @media #{$celularh}, #{$tablet}
+                    padding-left: 0
+            a
+                position: absolute
+                bottom: 0
+                right: 0
+                left: 0
+                top: 0
+                width: 100%
+            .icone-filtro
+                display: block
+                font-size: 0
+                @media #{$celular}
+                    float: left
+                    width: 40px
+                    text-align: left
+                svg
+                    // @include prefix(transition, transform .2s ease, webkit ms moz o)
+                    path, polygon, rect
+                        @include prefix(transition, fill .2s ease, webkit ms moz o)
+                        fill: #CCC
+                &.tam1
+                    svg
+                        width: 18px
+                        height: 22px
+                &.tam2
+                    svg
+                        width: 22px
+                        height: 22px
+            .nome-filtro
+                @include prefix(transition, color .2s ease, webkit ms moz o)
+                display: block
+                // font-family: 'Roboto'
+                letter-spacing: 1px
+                color: #CCC
+                @media #{$celular}
+                    float: left
+                    margin-top: 4px
+                    font-size: 14px
+                @media #{$celularh}
+                    font-size: 14px
+                    margin-top: 13px
+                @media #{$tablet}
+                    font-size: 14px
+                    margin-top: 13px
+                @media #{$notebook}
+                    font-size: 14px
+                    margin-top: 13px
+                    // font-weight: 200
+                @media #{$desktop}
+                    margin-top: 17px
+                    // font-weight: 200
+            &+li
+                @media #{$celular}
+                    border-top: 2px solid #f7f7f7
+                    margin-top: 13px
+                    padding-top: 13px
+                &:before
+                    content: ''
+                    position: absolute
+                    left: 0
+                    background: #f7f7f7
+                    @media #{$celular}
+                    @media #{$celularh}
+                        top: 12px
+                        height: 28px
+                        width: 2px
+                    @media #{$tablet}
+                        top: 14px
+                        height: 28px
+                        width: 2px
+                    @media #{$notebook}
+                        top: 14px
+                        height: 28px
+                        width: 2px
+                    @media #{$desktop}
+                        top: 12px
+                        height: 32px
+                        width: 2px
+            &.ativo,
+            &:hover
+                .nome-filtro
+                    color: $cor1
+                svg
+                    // @include prefix(transform, scale(1.3), webkit ms moz o)
+                    path, polygon, rect
+                        fill: $cor1
+    .pesquisar-filtro
+        float: right
+        border: none
+        padding: 0
+        background-color: transparent
+        @media #{$celular}
+            float: none
+            display: block
+            border: 2px solid #f7f7f7
+            padding: 10px
+            width: 100%
+            margin-top: 25px
+            border-radius: 15px
+            text-align: center
+        @media #{$celularh}
+            margin-top: 15px
+        @media #{$tablet}
+            margin-top: 15px
+        @media #{$notebook}
+            margin-top: 15px
+        @media #{$desktop}
+            margin-top: 18px
+        svg
+            width: 17px
+            height: 17px
+            fill: #4a70fa

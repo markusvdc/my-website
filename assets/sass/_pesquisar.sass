@@ -1,0 +1,78 @@
+.pesquisar
+    // display: none
+    @include prefix(background, linear-gradient(135deg, $cor2 0%, $cor1 100%), webkit moz)
+    background-color: #999
+    line-height: 1.3
+    @media #{$celular}
+        margin-top: 50px
+        padding: 75px 0
+    @media #{$celularh}
+        margin-top: 30px
+        padding: 75px 0
+    @media #{$tablet}
+        margin-top: 80px
+        padding: 90px 0
+    @media #{$notebook}
+        margin-top: 80px
+        padding: 90px 0
+    @media #{$desktop}
+        margin-top: 110px
+        padding: 112px 0
+    form
+        overflow: hidden
+        margin: 0 auto
+        position: relative
+        padding-right: 30px
+        @media #{$celular}
+            width: 100%
+        @media #{$celularh}
+            width: 100%
+        @media #{$tablet}
+            width: 440px
+        @media #{$notebook}
+            width: 440px
+        @media #{$desktop}
+            width: 530px
+        input
+            background-color: transparent
+            border: none
+            color: #FFF
+            border: 2px solid #FFF
+            font-size: 14px
+            width: 100%
+            border-radius: 15px
+            @media #{$celular}, #{$celularh}, #{$tablet}, #{$notebook}
+                padding: 15px 20px
+                // border-radius: 10px
+            @media #{$desktop}
+                padding: 18px 25px
+        button
+            color: #FFF
+            background-color: transparent
+            border: none
+            padding: 0
+            position: absolute
+            right: 0
+            @media #{$celular}, #{$celularh}, #{$tablet}, #{$notebook}
+                top: 15px
+            @media #{$desktop}
+                top: 19px
+            svg
+                @media #{$celular}, #{$celularh}, #{$tablet}, #{$notebook}
+                    width: 15px
+                    height: 15px
+                @media #{$desktop}
+                    width: 17px
+                    height: 17px
+                path
+                    fill: #FFF
+    .erro-pesquisar
+        background-color: #E43F6F
+        color: #FFF
+        margin-top: 10px
+        @media #{$celular}, #{$celularh}
+            font-size: 12px
+            padding: 6px 15px
+        @media #{$tablet}, #{$notebook}, #{$desktop}
+            font-size: 14px
+            padding: 10px 20px
